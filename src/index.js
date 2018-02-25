@@ -7,19 +7,19 @@ class Sorter {
   }
 
   add(element) {
-    this.array.push(element)
+    this.array.push(element);
   }
 
   at(index) {
-    return this.array[index]
+    return this.array[index];
   }
 
   get length() {
-    return this.array.length
+    return this.array.length;
   }
 
   toArray() {
-    return this.array
+    return this.array;
   }
 
   sort(indices) {
@@ -28,8 +28,8 @@ class Sorter {
           unsortedArray.push(this.array[indices[i]]);
       }
 
-      unsortedArray.sort(this.comparator)
-
+      unsortedArray.sort(this.comparator);
+      indices.sort(this.comparator);
       for (var j = 0; j < indices.length; j++){
           this.array[indices[j]] = unsortedArray[j];
       }
